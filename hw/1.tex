@@ -1,0 +1,129 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+
+
+% \newcommand*{\cross}{\times} %defined in main.tex
+
+\begin{document}
+
+
+
+
+
+\subsection*{1 A}
+
+
+\begin{quote}
+    Popište vyhrávající strategii prvního hráče ve hře $3 \cross 3 \cross 3$ piškvorky.
+\end{quote}
+
+
+V prvním tahu jako první hráč zahrajeme $\cross$ na pozici $[2,2,2]$, tedy uprostřed.
+
+Druhý hráč jako odpověď může zahrát jeden z následujících 3 tahů.
+\begin{enumerate}
+    \item Zahraje $\circ$ do rohu, BÚNO $[1,1,1]$
+    \item Zahraje $\circ$ na hranu, BÚNO $[2,1,1]$
+    \item Zahraje $\circ$ do strany, BÚNO $[2,2,1]$
+\end{enumerate}
+Toto je bez úhony na obecnosti, protože hra je symetrická pro otáčení a zrcadlení.
+
+První hráč nezávisle na tahu druhého hráče následně zahraje tah $\cross$ na pozici $[1,1,2]$.
+
+Druhý hráč je nucen zahrát $\circ$ na $[3,3,2]$ (pokud tak neučiní zahraje na toto pole první hráč ve svém tahu a vyhraje.)
+
+První hráč následovně zahraje $\cross$ na pozici $[1,2,2]$. 
+
+Druhý hráč je nyní nucen zahrát $\circ$ na 2 pozice, pozici $[1,3,2]$ a pozici $[3,2,2]$. Toto je ale nemožné. 
+První hráč na svém kole tedy buded určitě schopen zahrát jednu z těchto pozic a vyhrát.
+
+\subsection*{1 B}
+
+\begin{quote}
+    Zkonstruujte 2-obarvení $3 \times 3 \times 3$, 
+    které nemá žádnou monochromatickou kombinatorickou přímku.
+    
+\end{quote}
+
+Máme abecedu $A = \{ 1,2,3 \}$ a dimenzi $d = 3$. 
+
+Obarvení označme jako $\{X, O\}$.
+
+Máme následující vzory:
+
+\begin{multicols}{4}
+\begin{itemize}
+    \item $\tau_1    = * * *$
+    \item $\tau_2    = 1 * *$
+    \item $\tau_3    = 2 * *$
+    \item $\tau_4    = 3 * *$
+    \item $\tau_5    = * 1 *$
+    \item $\tau_6    = * 2 *$
+    \item $\tau_7    = * 3 *$
+    \item $\tau_8    = * * 1$
+    \item $\tau_9    = * * 2$
+    \item $\tau_0 = * * 3$
+    \item $\tau_{10} = 1 1 *$
+    \item $\tau_a = 1 2 *$
+    \item $\tau_b = 1 3 *$
+    \item $\tau_c = 1 * 1$
+    \item $\tau_d = 1 * 2$
+    \item $\tau_e = 1 * 3$
+    \item $\tau_f = 2 1 *$
+    \item $\tau_g = 2 2 *$
+    \item $\tau_h = 2 3 *$
+    \item $\tau_i = 2 * 1$
+    \item $\tau_j = 2 * 2$
+    \item $\tau_k = 2 * 3$
+    \item $\tau_l = 3 1 *$
+    \item $\tau_m = 3 2 *$
+    \item $\tau_n = 3 3 *$
+    \item $\tau_o = 3 * 1$
+    \item $\tau_p = 3 * 2$
+    \item $\tau_q = 3 * 3$
+    \item $\tau_r = * 1 1$
+    \item $\tau_s = * 1 2$
+    \item $\tau_t = * 1 3$
+    \item $\tau_u = * 2 1$
+    \item $\tau_v = * 2 2$
+    \item $\tau_w = * 2 3$
+    \item $\tau_y = * 3 1$
+    \item $\tau_x = * 3 2$
+    \item $\tau_z = * 3 3$
+\end{itemize}
+\end{multicols}
+
+Máme tedy 37 kombinatorických přímek které nemají být monochromatické.
+
+
+Postupujme následovně.
+
+Každé slovo obarvíme jako $X$. Toto obarvení zřejmě není monochromatické.
+
+Změňme obarvení následujících slov: $311,221, 131$ na $O$. 
+Tyto slova mohou mít stejnou barvu, protože netvoří kombinatorickou přímku. 
+Jedná se ale o propojení protějších rohů krychle. 
+
+To samé provedeme pro i pro slova $122, 212, 332$ a $113, 323, 233$.
+
+Pokud nějaký vzor obsahuje jedno z předchozích slov, jeho kombinatorická přímka přestává být monochromatickou.
+
+Jediný vzor který zbyde a je monochromatický je vzor $\tau_1 = * * *$, 
+ten ale přestane být monochromatický poté co  
+obarvíme $111$ na $X$. Můžeme jednoduše zkontrolovat ,že obarvení tohoto slova
+nevytvoří žádnou novou monochromatickou přímku. 
+
+
+
+Tímto jsme zkonstruovali obarvení které neobsahuje žádnou monochromatickou přímku. 
+
+
+
+
+
+
+
+
+
+
+\end{document}
